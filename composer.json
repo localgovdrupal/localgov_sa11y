@@ -1,5 +1,5 @@
 {
-  "name": "localgov_sa11y/localgov_sa11y",
+  "name": "localgovdrupal/localgov_sa11y",
   "description": "Adds Sa11y to LocalGov Drupal sites",
   "type": "project",
   "license": "MIT",
