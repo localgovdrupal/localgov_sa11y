@@ -5,6 +5,7 @@
       Sa11y.Lang.addI18n(Sa11yLangEn.strings);
       const sa11y = new Sa11y.Sa11y({
         checkRoot: "div.dialog-off-canvas-main-canvas",
+        containerIgnore: '.lgd-region--tabs',
       });
     },
   };
