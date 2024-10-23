@@ -58,6 +58,15 @@ class Sa11yOptionsForm extends ConfigFormBase {
       '#required' => FALSE,
     ];
 
+    $default_linkIgnore_value = $config->get('linkIgnore');
+    $form['linkIgnore'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Link Ignore: Ignore specific links on the page'),
+      '#description' => $this->t('List of CSS selectors to have sa11y ignore specific links on the page - add each selector on a separate line (Default: \'\') '),
+      '#default_value' => !empty($default_linkIgnore_value) ? $default_linkIgnore_value : '',
+      '#required' => FALSE,
+    ];
+
     $default_exportResultsPlugin_value = $config->get('exportResultsPlugin');
     $form['exportResultsPlugin'] = [
       '#type' => 'checkbox',
