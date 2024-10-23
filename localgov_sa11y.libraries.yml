@@ -3,6 +3,7 @@ localgov_sa11y:
     js/localgov-sa11y.js: {}
   dependencies:
     - core/drupal
+    - core/drupalSettings
     - localgov_sa11y/sa11y-files
 
 sa11y-files:
