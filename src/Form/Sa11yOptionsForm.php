@@ -113,6 +113,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
       ->set('checkRoot', $form_state->getValue('checkRoot'))
       ->set('containerIgnore', $form_state->getValue('containerIgnore'))
       ->set('contrastIgnore', $form_state->getValue('contrastIgnore'))
+      ->set('linkIgnore', $form_state->getValue('linkIgnore'))
       ->set('exportResultsPlugin', $form_state->getValue('exportResultsPlugin'))
       ->set('checkAllHideToggles', $form_state->getValue('checkAllHideToggles'))
       ->set('panelPosition', $form_state->getValue('panelPosition'))
