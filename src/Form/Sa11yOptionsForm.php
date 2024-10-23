@@ -95,10 +95,10 @@ class Sa11yOptionsForm extends ConfigFormBase {
     $form['panelPosition'] = [
       '#type' => 'select',
       '#options' => [
-        'right' =>  $this->t('right'),
-        'left' =>  $this->t('left'),
-        'top-right' =>  $this->t('top-right'),
-        'top-left' =>  $this->t('top-left'),
+        'right' => $this->t('right'),
+        'left' => $this->t('left'),
+        'top-right' => $this->t('top-right'),
+        'top-left' => $this->t('top-left'),
       ],
       '#title' => $this->t('Panel position'),
       '#description' => $this->t('Move position of panel in any four corners. Choose from top-left, top-right, left, and right (Default: "right")'),
