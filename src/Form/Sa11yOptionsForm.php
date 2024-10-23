@@ -1,17 +1,20 @@
-<?php  
+<?php
 
 namespace Drupal\localgov_sa11y\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-  
+
+/**
+ * Settings form for localgov_sa11y options.
+ */
 class Sa11yOptionsForm extends ConfigFormBase {
 
   const LOCALGOV_SA11Y_SETTINGS = 'localgov_sa11y_options_form';
 
-   /**
-   * {@inheritdoc}
-   */
+  /**
+    * {@inheritdoc}
+    */
   protected function getEditableConfigNames() {
     return [
       'localgov_sa11y_options.settings',
@@ -35,7 +38,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
     $form['checkRoot'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Check Root: A single selector to scan a specific region of the page'),
-      '#description' => $this->t('A single selector to scan a specific region of the page. This selector should exist on every page of your website. (Default: \'div.dialog-off-canvas-main-canvas\') '),
+      '#description' => $this->t('A single selector to scan a specific region of the page. This selector should exist on every page of your website. (Default: "div.dialog-off-canvas-main-canvas")'),
       '#default_value' => !empty($default_checkRoot_value) ? $default_checkRoot_value : 'div.dialog-off-canvas-main-canvas',
       '#required' => TRUE,
     ];
@@ -44,7 +47,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
     $form['containerIgnore'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Container Ignore: Ignore specific regions of the page'),
-      '#description' => $this->t('List of CSS selectors to have Sa11y completely ignore specifc regions of the page - add each selector on a separate line (Default: \'\') '),
+      '#description' => $this->t('List of CSS selectors to have Sa11y completely ignore specifc regions of the page - add each selector on a separate line (Default: "")'),
       '#default_value' => !empty($default_containerIgnore_value) ? $default_containerIgnore_value : '',
       '#required' => FALSE,
     ];
@@ -53,7 +56,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
     $form['contrastIgnore'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Contrast Ignore: Ignore specific elements from the contrast check'),
-      '#description' => $this->t('List of CSS selectors to have sa11y ignore specific elements from the contrast check - add each selector on a separate line (Default: \'\') '),
+      '#description' => $this->t('List of CSS selectors to have sa11y ignore specific elements from the contrast check - add each selector on a separate line (Default: "")'),
       '#default_value' => !empty($default_contrastIgnore_value) ? $default_contrastIgnore_value : '',
       '#required' => FALSE,
     ];
@@ -62,7 +65,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
     $form['linkIgnore'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Link Ignore: Ignore specific links on the page'),
-      '#description' => $this->t('List of CSS selectors to have sa11y ignore specific links on the page - add each selector on a separate line (Default: \'\') '),
+      '#description' => $this->t('List of CSS selectors to have sa11y ignore specific links on the page - add each selector on a separate line (Default: "")'),
       '#default_value' => !empty($default_linkIgnore_value) ? $default_linkIgnore_value : '',
       '#required' => FALSE,
     ];
@@ -71,7 +74,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
     $form['exportResultsPlugin'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Allow "Export Reports"?'),
-      '#description' => $this->t('Select if you would like to add buttons that allow users to export issues as CSV or HTML (Default: FALSE) '),
+      '#description' => $this->t('Select if you would like to add buttons that allow users to export issues as CSV or HTML (Default: FALSE)'),
       '#default_value' => !empty($default_exportResultsPlugin_value) ? $default_exportResultsPlugin_value : FALSE,
       '#required' => FALSE,
     ];
@@ -80,7 +83,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
     $form['checkAllHideToggles'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Visually hide all toggle switches?'),
-      '#description' => $this->t('Select if you would like to visually hide all toggle switches in the Settings panel. This will not hide the Readability, Dark Mode, or Colour Filter toggles (Default: FALSE) '),
+      '#description' => $this->t('Select if you would like to visually hide all toggle switches in the Settings panel. This will not hide the Readability, Dark Mode, or Colour Filter toggles (Default: FALSE)'),
       '#default_value' => !empty($default_checkAllHideToggles_value) ? $default_checkAllHideToggles_value : FALSE,
       '#required' => FALSE,
     ];
@@ -95,7 +98,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
         'top-left' => t('top-left'),
       ],
       '#title' => $this->t('Panel position'),
-      '#description' => $this->t('Move position of panel in any four corners. Choose from top-left, top-right, left, and right (Default: \'right\') '),
+      '#description' => $this->t('Move position of panel in any four corners. Choose from top-left, top-right, left, and right (Default: "right")'),
       '#default_value' => !empty($default_panelPosition_value) ? $default_panelPosition_value : 'right',
       '#required' => TRUE,
     ];
