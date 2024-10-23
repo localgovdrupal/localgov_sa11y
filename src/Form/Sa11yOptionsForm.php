@@ -10,7 +10,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
  * Settings form for localgov_sa11y options.
  */
 class Sa11yOptionsForm extends ConfigFormBase {
-  
+
   use StringTranslationTrait;
 
   const LOCALGOV_SA11Y_SETTINGS = 'localgov_sa11y_options_form';
@@ -95,10 +95,10 @@ class Sa11yOptionsForm extends ConfigFormBase {
     $form['panelPosition'] = [
       '#type' => 'select',
       '#options' => [
-        'right' => t('right'),
-        'left' => t('left'),
-        'top-right' => t('top-right'),
-        'top-left' => t('top-left'),
+        'right' =>  $this->t('right'),
+        'left' =>  $this->t('left'),
+        'top-right' =>  $this->t('top-right'),
+        'top-left' =>  $this->t('top-left'),
       ],
       '#title' => $this->t('Panel position'),
       '#description' => $this->t('Move position of panel in any four corners. Choose from top-left, top-right, left, and right (Default: "right")'),
