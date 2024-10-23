@@ -4,11 +4,14 @@ namespace Drupal\localgov_sa11y\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * Settings form for localgov_sa11y options.
  */
 class Sa11yOptionsForm extends ConfigFormBase {
+  
+  use StringTranslationTrait;
 
   const LOCALGOV_SA11Y_SETTINGS = 'localgov_sa11y_options_form';
 
