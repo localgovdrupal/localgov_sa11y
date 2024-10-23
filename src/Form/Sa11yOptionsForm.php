@@ -13,8 +13,8 @@ class Sa11yOptionsForm extends ConfigFormBase {
   const LOCALGOV_SA11Y_SETTINGS = 'localgov_sa11y_options_form';
 
   /**
-    * {@inheritdoc}
-    */
+   * {@inheritdoc}
+   */
   protected function getEditableConfigNames() {
     return [
       'localgov_sa11y_options.settings',
