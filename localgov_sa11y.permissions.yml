@@ -1,3 +1,7 @@
 use_localgov_sa11y:
   title: 'Use LocalGov Sa11y'
   restrict access: true
+
+administer localgov_sa11y settings:
+  title: 'Administer localgov_sa11y settings'
+  restrict access: false

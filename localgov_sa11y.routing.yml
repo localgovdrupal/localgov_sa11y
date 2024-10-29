@@ -1,0 +1,7 @@
+localgov_sa11y.admin_settings:
+  path: '/admin/config/content/localgov-sa11y'
+  defaults:
+    _form: '\Drupal\localgov_sa11y\Form\Sa11yOptionsForm'
+    _title: 'localgov_sa11y settings'
+  requirements:
+    _permission: 'administer localgov_sa11y settings'
