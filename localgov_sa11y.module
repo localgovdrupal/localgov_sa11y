@@ -17,13 +17,13 @@ function localgov_sa11y_page_attachments(array &$page) {
     $page['#attached']['library'][] = 'localgov_sa11y/localgov_sa11y';
   }
 
-  $config = \Drupal::configFactory()->get('localgov_sa11y_options.settings');
+  $config = \Drupal::configFactory()->get('localgov_sa11y.settings');
 
-  $page['#attached']['drupalSettings']['localgov_sa11y_options']['checkRoot'] = $config->get('checkRoot');
-  $page['#attached']['drupalSettings']['localgov_sa11y_options']['containerIgnore'] = $config->get('containerIgnore');
-  $page['#attached']['drupalSettings']['localgov_sa11y_options']['contrastIgnore'] = $config->get('contrastIgnore');
-  $page['#attached']['drupalSettings']['localgov_sa11y_options']['linkIgnore'] = $config->get('linkIgnore');
-  $page['#attached']['drupalSettings']['localgov_sa11y_options']['exportResultsPlugin'] = $config->get('exportResultsPlugin');
-  $page['#attached']['drupalSettings']['localgov_sa11y_options']['checkAllHideToggles'] = $config->get('checkAllHideToggles');
-  $page['#attached']['drupalSettings']['localgov_sa11y_options']['panelPosition'] = $config->get('panelPosition');
+  $page['#attached']['drupalSettings']['localgov_sa11y']['checkRoot'] = $config->get('checkRoot');
+  $page['#attached']['drupalSettings']['localgov_sa11y']['containerIgnore'] = $config->get('containerIgnore');
+  $page['#attached']['drupalSettings']['localgov_sa11y']['contrastIgnore'] = $config->get('contrastIgnore');
+  $page['#attached']['drupalSettings']['localgov_sa11y']['linkIgnore'] = $config->get('linkIgnore');
+  $page['#attached']['drupalSettings']['localgov_sa11y']['exportResultsPlugin'] = $config->get('exportResultsPlugin');
+  $page['#attached']['drupalSettings']['localgov_sa11y']['checkAllHideToggles'] = $config->get('checkAllHideToggles');
+  $page['#attached']['drupalSettings']['localgov_sa11y']['panelPosition'] = $config->get('panelPosition');
 }

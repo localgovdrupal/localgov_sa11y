@@ -13,14 +13,14 @@ class Sa11yOptionsForm extends ConfigFormBase {
 
   use StringTranslationTrait;
 
-  const LOCALGOV_SA11Y_SETTINGS = 'localgov_sa11y_options_form';
+  const LOCALGOV_SA11Y_SETTINGS = 'localgov_sa11y_form';
 
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
     return [
-      'localgov_sa11y_options.settings',
+      'localgov_sa11y.settings',
     ];
   }
 
@@ -35,7 +35,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('localgov_sa11y_options.settings');
+    $config = $this->config('localgov_sa11y.settings');
 
     $default_checkRoot_value = $config->get('checkRoot');
     $form['checkRoot'] = [
@@ -115,7 +115,7 @@ class Sa11yOptionsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
-    $this->config('localgov_sa11y_options.settings')
+    $this->config('localgov_sa11y.settings')
       ->set('checkRoot', $form_state->getValue('checkRoot'))
       ->set('containerIgnore', $form_state->getValue('containerIgnore'))
       ->set('contrastIgnore', $form_state->getValue('contrastIgnore'))
